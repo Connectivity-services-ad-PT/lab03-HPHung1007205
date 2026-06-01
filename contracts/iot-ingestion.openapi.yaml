@@ -38,6 +38,15 @@ paths:
                     status: ok
                     service: iot-ingestion
                     version: 0.3.0
+    head:
+      tags: [system]
+      operationId: headHealth
+      summary: Kiểm tra trạng thái service (HEAD)
+      description: HEAD request to health endpoint for monitoring without receiving body.
+      security: []
+      responses:
+        "200":
+          description: Service đang hoạt động
 
   /readings:
     post:
